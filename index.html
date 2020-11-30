@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="description" content="Webpage description goes here" />
+  <meta charset="utf-8">
+  <title>ROCK PAPER SCISSORS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body>
+  
+<div class="container">
+  
+</div>
+
+<script>
+    //computer chooses one of 3 (rock paper scissors)
+    function computerPlay () {
+       let computerChoice=Math.floor(Math.random() * 3);
+  if (computerChoice==0) {
+      return"Rock"
+      
+  }
+  else if(computerChoice==1  ){
+      return"Scissors"
+      
+  }
+   else {
+      return "Papper"
+  }
+    }
+    let playerSelection;
+    //player choose one of 3 and gets compared with computer
+    function playRound(playerSelection, computerPlay) {
+  if (playerSelection=="rock") {
+      if (computerPlay=="Rock") {
+          return"draw"
+          
+      }
+      else if (computerPlay=="Papper"){
+          return "You Loose"
+      }
+      else{
+          return"You win"
+      }
+      
+  }
+  else if(playerSelection=="paper"){
+    if (computerPlay=="Rock") {
+          return"You Win"
+          
+      }
+      else if (computerPlay=="Papper"){
+          return "Draw"
+      }
+      else{
+          return"You Loose"
+      }
+  }
+  else{
+    if (computerPlay=="Rock") {
+          return"Draw"
+          
+      }
+      else if (computerPlay=="Papper"){
+          return "You Loose"
+      }
+      else{
+          return"You Win"
+      }
+  }
+}
+
+    
+</script>
+
+</body>
+</html>
